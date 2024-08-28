@@ -1,11 +1,12 @@
+// "use client"
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
 import {HiPencilAlt} from "react-icons/hi"
 import moment from "moment";
 
-const getTopics = async()=>{
+const getTopics = async()=>{ 
     try{
-        const res = await fetch("http://localhost:3000/api/topics",{
+        const res = await fetch(`http://localhost:3000/api/topics`,{
             cache:"no-store"
         })
         if(!res.ok){
@@ -22,7 +23,13 @@ console.log("error loading topics:",error)
 export default async function TopicsList(){
 
 
+   
+
+
+
     const {topics}= await getTopics() 
+
+   
 
 
 
@@ -49,6 +56,7 @@ export default async function TopicsList(){
             </div>
         </div>
         ))}
+       
         </>
     )
 }
