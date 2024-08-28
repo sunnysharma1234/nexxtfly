@@ -21,19 +21,13 @@ console.log("error loading topics:",error)
 
 export default async function TopicsList(){
 
-// time
 
-
-
-// time
-    const {topics}= await getTopics()
+    const {topics}= await getTopics() 
 
 
 
     return(
         <>
-        <div>
-        <div>
         {topics.map((t)=>(
         <div className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start" >
             <div>
@@ -55,11 +49,6 @@ export default async function TopicsList(){
             </div>
         </div>
         ))}
-        </div>
-        <div>
-            
-        </div>
-        </div>
         </>
     )
 }
